@@ -1,0 +1,26 @@
+{
+  "name": "kontest-api",
+  "version": "1.0.0",
+  "description": "a basic project",
+  "main": "bundle.js",
+  "scripts": {
+    "dev": "webpack --mode development",
+    "build": "webpack --mode production",
+    
+    "start": "webpack-dev-server"
+  },
+  "author": "Samar Anand",
+  "license": "ISC",
+  "devDependencies": {
+    "html-webpack-plugin": "^4.5.0",
+    "path": "^0.12.7",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "require": "^2.4.20"
+  }
+}
+
+
