@@ -107,39 +107,32 @@ let running_count = 0,
   in24hr_count = 0;
 
 let updateUI = function () {
-  fetch("http://worldclockapi.com/api/json/utc/now")
-    .then((res) => res.json())
-    .then((d) => {
-      currentTime = d["currentDateTime"];
-    })
-    .then(() => {
-      result.forEach((r) => {
-        // console.log(r['name']);
+  result.forEach((r) => {
+    console.log(currentTime);
 
-        if (r["start_time"] <= currentTime && r["end_time"]>currentTime) {
-          let v = returnConverted(r);
-          if (running_count < 10) {
-            running.insertAdjacentHTML("beforeend", v);
-            running_count += 1;
-            // console.log(r["start_time"]);
-            // console.log(currentTime);
-          }
-        } else {
-          let v = returnConverted(r);
-          if (upcomin_count < 15) {
-            upcoming.insertAdjacentHTML("beforeend", v);
-            upcomin_count += 1;
-          }
-        }
-        if (r["in_24_hours"] === "Yes") {
-          let v = returnConverted(r);
-          if (in24hr_count < 10) {
-            in24hr.insertAdjacentHTML("beforeend", v);
-            in24hr_count += 1;
-          }
-        }
-      });
-    });
+    if (r["status"] === "CODING") {
+      let v = returnConverted(r);
+      if (running_count < 10) {
+        running.insertAdjacentHTML("beforeend", v);
+        running_count += 1;
+        // console.log(r["start_time"]);
+        // console.log(currentTime);
+      }
+    } else {
+      let v = returnConverted(r);
+      if (upcomin_count < 15) {
+        upcoming.insertAdjacentHTML("beforeend", v);
+        upcomin_count += 1;
+      }
+    }
+    if (r["in_24_hours"] === "Yes") {
+      let v = returnConverted(r);
+      if (in24hr_count < 10) {
+        in24hr.insertAdjacentHTML("beforeend", v);
+        in24hr_count += 1;
+      }
+    }
+  });
 };
 
 let initFun = function () {
@@ -159,6 +152,6 @@ initFun();
 
 document.addEventListener("DOMContentLoaded", function () {
   var elems = document.querySelectorAll(".scrollspy");
-  var instances = M.ScrollSpy.init(elems);
-  console.log("samar");
+  M.ScrollSpy.init(elems);
+  // console.log("samar");
 });
