@@ -51,12 +51,25 @@ function convertToHour(seconds) {
   return `${hr} Hrs ${mi} Mins ${sc} Seconds`;
 }
 
+function formatAMPM(date) {
+  var hours = date.getHours();
+  var days = date.getDay();
+  var minutes = date.getMinutes();
+  var ampm = hours >= 12 ? "PM" : "AM";
+  hours = hours % 12;
+  hours = hours ? hours : 12;
+  minutes = minutes < 10 ? "0" + minutes : minutes;
+  var time = hours + ":" + minutes + " " + ampm;
+  var match = date.toString().match(/\w{3} \w{3} \d{1,2} \d{4}/);
+  return match[0] + " " + time;
+}
+
 function returnConverted(r) {
   const start_utcDate = r["start_time"];
   const end_utcDate = r["end_time"];
   const startDate = new Date(start_utcDate);
   const endDate = new Date(end_utcDate);
-  // console.log(startDate.toDateString());
+  // console.log(formatAMPM(startDate));
   const t = `<section class="section">
   <div class="col s12 m12 l12">
     <span class="platform flow-text left" id="name"
@@ -73,15 +86,21 @@ function returnConverted(r) {
       >${convertToHour(r["duration"])}</span
     >
   </div>
-  <div class="col s6 m6 l6">
-    <span><b>From - ${startDate.toDateString()}</b></span>
+  <div class="col s12 m6 l6">
+    <span><b>From - ${formatAMPM(startDate)}</b></span>
   </div>
-  <div class="col s6 m6 l6">
-    <span><b>To - ${endDate.toDateString()}</b></span>
+  <div class="col s12 m6 l6">
+    <span><b>To - ${formatAMPM(endDate)}</b></span>
   </div>
 </section> <div class="col s12 m12 l12"><hr /></div>`;
   return t;
 }
+
+const funToClearProgressbar = function () {
+  running.innerHTML = "";
+  in24hr.innerHTML = "";
+  upcoming.innerHTML = "";
+};
 
 let running_count = 0,
   upcomin_count = 0,
@@ -97,15 +116,17 @@ let updateUI = function () {
       result.forEach((r) => {
         // console.log(r['name']);
 
-        if (r["start_time"] <= currentTime) {
+        if (r["start_time"] <= currentTime && r["end_time"]>currentTime) {
           let v = returnConverted(r);
           if (running_count < 10) {
             running.insertAdjacentHTML("beforeend", v);
             running_count += 1;
+            // console.log(r["start_time"]);
+            // console.log(currentTime);
           }
         } else {
           let v = returnConverted(r);
-          if (upcomin_count < 10) {
+          if (upcomin_count < 15) {
             upcoming.insertAdjacentHTML("beforeend", v);
             upcomin_count += 1;
           }
@@ -127,6 +148,7 @@ let initFun = function () {
     .then((data) => {
       // console.log(data);
       result = data;
+      funToClearProgressbar();
       updateUI();
     });
 };

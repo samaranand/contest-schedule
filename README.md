@@ -10,7 +10,7 @@ all contributions are most welcomed !! even if u can help me in improving gramme
 
 
 ## Changelog
-For changelogs, check out [the Releases section of materialize](https://github.com/Dogfalo/materialize/releases) or the [CHANGELOG.md](CHANGELOG.md).
+For changelogs, check out [the Releases section](https://github.com/samaranand/contest-schedule) or the [CHANGELOG.md](CHANGELOG.md).
 
 
 thanks !
