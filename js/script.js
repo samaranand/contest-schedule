@@ -107,7 +107,7 @@ let running_count = 0,
   in24hr_count = 0;
 
 let updateUI = function () {
-  fetch("http://worldclockapi.com/api/json/utc/now")
+  fetch("https://worldclockapi.com/api/json/utc/now")
     .then((res) => res.json())
     .then((d) => {
       currentTime = d["currentDateTime"];
