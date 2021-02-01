@@ -69,23 +69,23 @@
           <ul class="left">
             <li>
               <a
-                href="#!"
+                href="#running"
                 class="grey-text text-lighten-2 waves-effect waves-light"
-                >Codeforces</a
+                >Live</a
               >
             </li>
             <li>
               <a
-                href="#!"
+                href="#in24hr"
                 class="grey-text text-lighten-2 waves-effect waves-light"
-                >Codechef</a
+                >in24hr</a
               >
             </li>
             <li>
               <a
-                href="#!"
+                href="#upcoming"
                 class="grey-text text-lighten-2 waves-effect waves-light"
-                >AtCoder</a
+                >Upcoming</a
               >
             </li>
           </ul>
@@ -105,29 +105,135 @@
     <br />
     <!-- container -->
     <div class="container">
-      <div class="running" id="running">
+      <div class="running scrollspy" id="running">
         <h3>Live Contest</h3>
-        <!-- grey darken-3 -->
-        <div class="value" id="value">
-          <section class="section light-blue">
-            <div class="name" id="name">cf div 2</div>
-            <hr />
-            <div class="link" id="link">
-              <a class="white-text" href="#">link #</a>
-            </div>
-            <div class="duration" id="duration">duration</div>
-          </section>
+        <!--  -->
+        <!-- light-blue -->
+        <div class="value grey darken-3">
+          <div class="row" id="running-value">
+            <!-- section to be inserted using JS -->
+            <!-- <section class="section">
+              <div class="col s12 m12 l12">
+                
+                <span class="platform flow-text left" id="name"
+                  ><a href="#">Name</a></span
+                >
+              </div>
+              <div class="col s12 m6 l6">
+                <span class="platform flow-text left" id="platform"
+                  >Platform</span
+                >
+              </div>
+              <div class="col s12 m6 l6" id="duration">
+                <span class="platform flow-text left" id="duration"
+                  >Duration</span
+                >
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>From - 12.02.20</b></span>
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>To - 18.02.21</b></span>
+              </div>
+            </section> -->
+            <!-- <div class="col s12 m12 l12"><hr /></div>
+            <section class="section">
+              <div class="col s12 m12 l12">
+                <span class="platform flow-text left" id="name"
+                  ><a href="#">Name</a></span
+                >
+              </div>
+              <div class="col s12 m6 l6">
+                <span class="platform flow-text left" id="platform"
+                  >Platform</span
+                >
+              </div>
+              <div class="col s12 m6 l6" id="duration">
+                <span class="platform flow-text left" id="duration"
+                  >Duration</span
+                >
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>From - 12.02.20</b></span>
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>To - 18.02.21</b></span>
+              </div>
+            </section> -->
+          </div>
         </div>
 
         <br />
       </div>
-      <div class="in-24-hr" id="in-24-hr">
-        <h3>in 24 hours</h3>
 
+      <!-- in 24 hr column -->
+      <div class="in-24-hr scrollspy" id="in24hr">
+        <h3>in 24 hours</h3>
+        <div class="value grey darken-3">
+          <div class="row" id="in24hr-value">
+            <!-- section to be inserted using JS -->
+            <!-- <section class="section">
+              <div class="col s12 m12 l12">
+                
+                <span class="platform flow-text left" id="name"
+                  ><a href="#">Name</a></span
+                >
+              </div>
+              <div class="col s12 m6 l6">
+                <span class="platform flow-text left" id="platform"
+                  >Platform</span
+                >
+              </div>
+              <div class="col s12 m6 l6" id="duration">
+                <span class="platform flow-text left" id="duration"
+                  >Duration</span
+                >
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>From - 12.02.20</b></span>
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>To - 18.02.21</b></span>
+              </div>
+            </section>
+            <div class="col s12 m12 l12"><hr /></div> -->
+          </div>
+        </div>
         <br />
       </div>
-      <div class="upcoming" id="upcoming">
+      <div class="upcoming scrollspy" id="upcoming">
         <h3>upcoming</h3>
+        <div class="value grey darken-3">
+          <div class="row" id="upcoming-value">
+            <!-- section to be inserted using JS -->
+
+            <!-- <div class="col s12 m12 l12"><hr /></div>
+            <section class="section">
+              <div class="col s12 m12 l12">
+                i will add link under name so that one can click on name to go for contest
+                <span class="platform flow-text left" id="name"
+                  ><a href="#">Name</a></span
+                >
+              </div>
+              <div class="col s12 m6 l6">
+                <span class="platform flow-text left" id="platform"
+                  >Platform</span
+                >
+              </div>
+              <div class="col s12 m6 l6" id="duration">
+                <span class="platform flow-text left" id="duration"
+                  >Duration</span
+                >
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>From - 12.02.20</b></span>
+              </div>
+              <div class="col s6 m6 l6">
+                <span><b>To - 18.02.21</b></span>
+              </div>
+            </section> -->
+          </div>
+        </div>
         <br />
       </div>
     </div>
@@ -141,7 +247,15 @@
     > -->
 
     <!-- script below -->
-    <script src="script.js"></script>
+    <footer class="page-footer">
+      <div class="footer-copyright grey darken-3">
+        <div class="container">
+          <a href="https://samaranand.github.io/"> © Samar Anand </a>
+          <a class="grey-text text-lighten-4 right" href="#!">Github</a>
+        </div>
+      </div>
+    </footer>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
