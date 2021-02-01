@@ -4,6 +4,32 @@ let running = document.getElementById("running");
 let upcoming = document.getElementById("upcoming");
 let in24hr = document.getElementById("in-24-hr");
 
+let dark_check = document.getElementById("dark-btn");
+
+dark_check.addEventListener("click", () => {
+  if (dark_check.value == "on") {
+    dark_check.value = "off";
+    document.body.className = document.body.className.replace(
+      "darken-4",
+      "lighten-3"
+    );
+    document.body.className = document.body.className.replace(
+      "text-lighten-2",
+      "text-darken-4"
+    );
+  } else {
+    dark_check.value = "on";
+    document.body.className = document.body.className.replace(
+      "lighten-3",
+      "darken-4"
+    );
+    document.body.className = document.body.className.replace(
+      "text-darken-4",
+      "text-lighten-2"
+    );
+  }
+});
+
 function convertToHour(seconds) {
   let hr, mi, sc;
   hr = Math.floor(seconds / (60 * 60));
@@ -19,7 +45,7 @@ function returnConverted(r) {
   const utcDate2 = r["end_time"];
   const localDate = new Date(utcDate);
   const localDate2 = new Date(utcDate2);
-  
+
   const v = `<div class="value" id="value">
           <div class="name" id="name">${r["name"]}</div>
           <div class="link" id="link"><a href=" ${r["url"]}">link</a></div>
@@ -27,7 +53,7 @@ function returnConverted(r) {
             r["duration"]
           )}</div>
         </div><br/>`;
-    return v;
+  return v;
 }
 
 let updateUI = function () {
@@ -40,16 +66,15 @@ let updateUI = function () {
       result.forEach((r) => {
         // console.log(r['name']);
         if (r["start_time"] <= currentTime) {
-          
           let v = returnConverted(r);
           running.insertAdjacentHTML("beforeend", v);
         } else {
-            let v = returnConverted(r);
-            upcoming.insertAdjacentHTML("beforeend", v);
+          let v = returnConverted(r);
+          upcoming.insertAdjacentHTML("beforeend", v);
         }
-        if(r['in_24_hours']==='Yes'){
-            let v = returnConverted(r);
-            in24hr.insertAdjacentHTML("beforeend", v);
+        if (r["in_24_hours"] === "Yes") {
+          let v = returnConverted(r);
+          in24hr.insertAdjacentHTML("beforeend", v);
         }
       });
     });
@@ -59,10 +84,12 @@ let initFun = function () {
   fetch("https://kontests.net/api/v1/all")
     .then((res) => res.json())
     .then((data) => {
-      console.log(data);
+      // console.log(data);
       result = data;
       updateUI();
     });
 };
 
-initFun();
+// initFun();
+
+

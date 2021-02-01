@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>kontest-details</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <script defer="defer" src="./js/icons/all.js"></script>
+  </head>
+  <body class="grey darken-4 grey-text text-lighten-2">
+    <div class="navbar-fixed">
+      <nav class="nav-color">
+        <div class="nav-wrapper">
+          <ul class="left">
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >Codeforces</a
+              >
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >Codechef</a
+              >
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >AtCoder</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="switch right dark-btn">
+      <label
+        ><i class="far fa-moon fa-lg"></i>
+        <input type="checkbox" id="dark-btn" /> <span class="lever"></span>
+        <i class="fas fa-sun fa-lg"></i
+      ></label>
+    </div>
+    <div class="container">
+      <div class="running" id="running">
+        <h3>Live Contest</h3>
+        <div class="value" id="value">
+          <div class="name" id="name">cf div 2</div>
+          <div class="link" id="link"><a href="#">link #</a></div>
+          <div class="duration" id="duration">duration</div>
+        </div>
+        <br />
+      </div>
+      <div class="upcoming" id="upcoming">
+        <h3>upcoming</h3>
+        <br />
+      </div>
+      <div class="in-24-hr" id="in-24-hr">
+        <h3>in 24 hours</h3>
+        <br />
+      </div>
+    </div>
+    <script src="script.js"></script>
+    <script src="js/materialize.min.js"></script>
+    <script src="bundle.js"></script>
+  </body>
+</html>

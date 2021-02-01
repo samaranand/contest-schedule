@@ -5,8 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>kontest-details</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!--Import materialize.css-->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/materialize.min.css"
+      media="screen,projection"
+    />
+    <script defer src="./js/icons/all.js"></script>
   </head>
-  <body>
+  <body class="grey darken-4 grey-text text-lighten-2">
     <!-- i will create 3 btns ig. 
     
     basically right now i will manage only few websites like cf, cc, atcoder, hackerearth n hackerrank !!
@@ -50,28 +62,86 @@
         in_24_hours	Yes if the contest starts within the next 24 hours, No otherwise.
         status
      -->
+    <div class="navbar-fixed">
+      <nav class="nav-color">
+        <div class="nav-wrapper">
+          <!-- <a href="#" class="brand-logo">Logo</a> -->
+          <ul class="left">
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >Codeforces</a
+              >
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >Codechef</a
+              >
+            </li>
+            <li>
+              <a
+                href="#!"
+                class="grey-text text-lighten-2 waves-effect waves-light"
+                >AtCoder</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <!-- dark-light btn -->
+    <div class="switch right dark-btn">
+      <label>
+        <i class="far fa-moon fa-lg"></i>
+        <input type="checkbox" id="dark-btn" />
+        <span class="lever"></span>
 
+        <i class="fas fa-sun fa-lg"></i>
+      </label>
+    </div>
+    <br />
+    <!-- container -->
     <div class="container">
       <div class="running" id="running">
-        <h1>running</h1>
-        <!-- <div class="value" id="value">
-          <div class="name" id="name">cf div 2</div>
-          <div class="link" id="link"><a href="#">link #</a></div>
-          <div class="duration" id="duration">duration</div>
-        </div> -->
-        <br />
-      </div>
-      <div class="upcoming" id="upcoming">
-        <h1>upcoming</h1>
+        <h3>Live Contest</h3>
+        <!-- grey darken-3 -->
+        <div class="value" id="value">
+          <section class="section light-blue">
+            <div class="name" id="name">cf div 2</div>
+            <hr />
+            <div class="link" id="link">
+              <a class="white-text" href="#">link #</a>
+            </div>
+            <div class="duration" id="duration">duration</div>
+          </section>
+        </div>
+
         <br />
       </div>
       <div class="in-24-hr" id="in-24-hr">
-        <h1>in 24 hours</h1>
+        <h3>in 24 hours</h3>
+
+        <br />
+      </div>
+      <div class="upcoming" id="upcoming">
+        <h3>upcoming</h3>
         <br />
       </div>
     </div>
 
-    
-    <!-- <script src="script.js"></script> -->
+    <!-- <a class="waves-effect waves-light btn">button</a>
+    <a class="waves-effect waves-light btn"
+      ><i class="material-icons left">cloud</i>button</a
+    >
+    <a class="waves-effect waves-light btn"
+      ><i class="material-icons right">cloud</i>button</a
+    > -->
+
+    <!-- script below -->
+    <script src="script.js"></script>
+    <script type="text/javascript" src="js/materialize.min.js"></script>
   </body>
 </html>
