@@ -15,4 +15,4 @@ For changelogs, check out [the Releases section](https://github.com/samaranand/c
 
 thanks !
 
-link : will be updated soon (22.11.20) :P
+[link](https://contest-schedule-12dhehpe5.vercel.app/) :P
