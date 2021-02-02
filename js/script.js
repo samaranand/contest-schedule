@@ -73,7 +73,7 @@ function returnConverted(r) {
   const t = `<section class="section">
   <div class="col s12 m12 l12">
     <span class="platform flow-text left" id="name"
-      ><a href="${r["url"]}">${r["name"]}</a></span
+      ><a href="${r["url"]}" target="_blank">${r["name"]}</a></span
     >
   </div>
   <div class="col s12 m6 l6">
@@ -108,8 +108,6 @@ let running_count = 0,
 
 let updateUI = function () {
   result.forEach((r) => {
-    console.log(currentTime);
-
     if (r["status"] === "CODING") {
       let v = returnConverted(r);
       if (running_count < 10) {
@@ -121,6 +119,7 @@ let updateUI = function () {
     } else {
       let v = returnConverted(r);
       if (upcomin_count < 15) {
+        console.log(r);
         upcoming.insertAdjacentHTML("beforeend", v);
         upcomin_count += 1;
       }
