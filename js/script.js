@@ -107,6 +107,7 @@ let running_count = 0,
   in24hr_count = 0;
 
 let updateUI = function () {
+  currentTime = new Date().toISOString();
   result.forEach((r) => {
     if (r["status"] === "CODING") {
       let v = returnConverted(r);
@@ -118,7 +119,7 @@ let updateUI = function () {
       }
     } else {
       let v = returnConverted(r);
-      if (upcomin_count < 15) {
+      if (upcomin_count < 15 && r["start_time"] > currentTime) {
         console.log(r);
         upcoming.insertAdjacentHTML("beforeend", v);
         upcomin_count += 1;

@@ -15,4 +15,4 @@ For changelogs, check out [the Releases section](https://github.com/samaranand/c
 
 thanks !
 
-[link](https://contest-schedule-12dhehpe5.vercel.app/) :P
+[link](https://contest-schedule.vercel.app/) :P
