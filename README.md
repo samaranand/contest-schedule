@@ -1,18 +1,18 @@
-# Contest Description
+# Contest Schedule
 
-trying to create a website which can provide details of all the upcoming/running contest from the most famous websites like CF, CC and atCoder...
+Website to display details of live/upcoming contest on some of the famous coding platforms like Codeforces,  Codechef, Atcoder and Hackerearth. 
 
-i know there are alot of website out there but i m making this so that i can develop something and also get to know about how to implement api n all things.. basically this website is for educational purpose !!
+Yes, there are lot of similar websites I have developed this for an educational  purpose to know about an API implementation and similar stuff. 
+
 
 ## Contributing
-Check out the [CONTRIBUTING document](CONTRIBUTING.md) in the root of the repository to learn how you can contribute.
-all contributions are most welcomed !! even if u can help me in improving grammers that matter alot 😅️
+Please checkout the [contributing](contribution.md) document in the root of the repository. 
+Pull requests are always welcome. even if you can help me improving documentation that matters a lot :) 
 
+Please make sure to update tests as appropriate.
 
 ## Changelog
-For changelogs, check out [the Releases section](https://github.com/samaranand/contest-schedule) or the [CHANGELOG.md](CHANGELOG.md).
+For changelogs, please check out [the releases section](https://github.com/samaranand/contest-schedule) or the [changelog.md](CHANGELOG.md).
 
-
-thanks !
-
-[link](https://contest-schedule.vercel.app/) :P
+## License
+[MIT](https://choosealicense.com/licenses/mit/)
