@@ -1,4 +1,4 @@
-# Contest Description
+# Contest Schedule
 
 A website which can provide details of all the upcoming/running contest from the most famous websites like CF, CC and atCoder...
 
@@ -15,4 +15,6 @@ For changelogs, check out [the Releases section](https://github.com/samaranand/c
 
 thanks !
 
-[link](https://contest-schedule.vercel.app/) :P
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
