@@ -24,3 +24,8 @@ a { color: inherit !important}
 .page-footer{
   padding: 0px !important;
 }
+
+
+a:hover {
+  color: white !important;
+}

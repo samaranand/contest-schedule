@@ -48,7 +48,11 @@ function convertToHour(seconds) {
   mi = Math.floor(seconds / 60);
   seconds = seconds % 60;
   sc = seconds;
-  return `${hr} Hrs ${mi} Mins ${sc} Seconds`;
+  let t = "";
+  if (hr > 0) t = t + `${hr} Hrs`;
+  if (mi > 0) t = t + ` ${mi} Mins`;
+  if (sc > 0) t = t + ` ${sc} Seconds`;
+  return t;
 }
 
 function formatAMPM(date) {
@@ -120,7 +124,6 @@ let updateUI = function () {
     } else {
       let v = returnConverted(r);
       if (upcomin_count < 15 && r["start_time"] > currentTime) {
-        console.log(r);
         upcoming.insertAdjacentHTML("beforeend", v);
         upcomin_count += 1;
       }
@@ -146,7 +149,7 @@ let initFun = function () {
     });
 };
 
-initFun();
+// initFun();
 
 // materialize-css-js
 
@@ -155,3 +158,16 @@ document.addEventListener("DOMContentLoaded", function () {
   M.ScrollSpy.init(elems);
   // console.log("samar");
 });
+
+const remVal = document.getElementById("remValue");
+const remValbtn = document.getElementById("value-btn");
+
+// remVal.addEventListener()
+remValbtn.addEventListener("click", () => {
+  console.log(remVal.value);
+  localStorage.setItem("cf", remVal.value);
+});
+if (localStorage.getItem("cf") !== null) {
+  console.log('my name is');
+  console.log(localStorage.getItem("cf"));
+}
