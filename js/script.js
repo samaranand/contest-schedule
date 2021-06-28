@@ -149,7 +149,7 @@ let initFun = function () {
     });
 };
 
-// initFun();
+initFun();
 
 // materialize-css-js
 
